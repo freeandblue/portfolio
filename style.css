@@ -2,6 +2,7 @@
 :root {
   /* Color */
   --color-background: #ffffff;
+  --color-text: black;
 
   /* Font size */
   --font-large: 48px;
@@ -21,4 +22,35 @@
 /* Universal tags */
 * {
   box-sizing: border-box;
+}
+
+/* Typography */
+h1 {
+  font-size: var(--font-large);
+  font-weight: var(--weight-bold);
+  color: var(--color-text);
+  margin: 16px 0px;
+  /* if two: top bottom */
+  /* if four: top right bottom left */
+}
+
+h2 {
+  font-size: var(--font-regular);
+  font-weight: var(--weight-semi-bold);
+  color: var(--color-text);
+  margin: 8px, 0px;
+}
+
+h3 {
+  font-size: var(--font-regular);
+  font-weight: var(--weight-regular);
+  color: var(--color-text);
+  margin: 8px, 0px;
+}
+
+p {
+  font-size: var(--font-regular);
+  font-weight: var(--weight-regular);
+  color: var(--color-text);
+  margin: 4px, 0px;
 }
