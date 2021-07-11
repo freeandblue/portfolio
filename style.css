@@ -41,9 +41,19 @@ a {
 }
 
 ul {
-  list-style: none;
   padding-left: 0;
   margin: 10px;
+}
+
+li {
+  list-style: none;
+}
+
+button {
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  outline: none;
 }
 
 /* Typography */
@@ -81,8 +91,8 @@ p {
 #navbar {
   display: flex;
   justify-content: space-between;
-  background-color: var(--color-dark);
-  color: var(--color-white);
+  background-color: var(--color-white);
+  color: var(--color-text);
   align-items: center;
   padding: 0px;
 }
@@ -105,6 +115,7 @@ p {
 .navbar__menu__item:hover {
   background-color: var(--color-highlight);
   border-radius: var(--size-border-radius);
+  color: var(--color-white);
 }
 
 .navbar__logo {
@@ -114,4 +125,39 @@ p {
 
 .navbar__logo img {
   width: 15%;
+}
+
+/* Home */
+#home {
+  background: url("images/front.png") center/cover no-repeat;
+  padding: 40px;
+  text-align: center;
+}
+
+.home__title,
+.home__description {
+  color: var(--color-white);
+}
+
+.home__avatar {
+  width: 150px;
+  height: 150px;
+  border-radius: 30%;
+  border: 2px solid var(--color-white);
+}
+
+.home__contact {
+  font-size: var(--font-regular);
+  font-weight: var(--weight-bold);
+  margin: 24px;
+  padding: 8px 12px;
+  border: 2px solid var(--color-white);
+  border-radius: var(--size-border-radius);
+  background-color: var(--color-white);
+}
+
+.home__contact:hover {
+  background-color: var(--color-highlight);
+  border-radius: var(--size-border-radius);
+  color: var(--color-white);
 }
