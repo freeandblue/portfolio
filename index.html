@@ -18,7 +18,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Barlow:ital,wght@0,300;0,400;0,600;0,700;1,200&display=swap" rel="stylesheet">
-    
+
     <!----Add css & js file---->
     <!---use "defer" for running js after html is pursued-->
     <link rel="stylesheet" href="style.css">
@@ -172,14 +172,45 @@
                         <li><span>Github</span></li>
                     </ul>
                 </div>
-                
-                
             </div>
         </div>
     </section>
     <!-- Projects -->
-    <section id="projects"></section>
+    <section id="projects">
+        <h1 class="projects__title">Projects</h1>
+        <!-- Categories -->
+        <div class="projects__categories">
+            <button class="category__btn">All<span class="category__count">12</span></button>
+            <button class="category__btn">E-Machine<span class="category__count">3</span></button>
+            <button class="category__btn">Front-end<span class="category__count">3</span></button>
+            <button class="category__btn">Mobile<span class="category__count">3</span></button>
+            <button class="category__btn">Maching learning<span class="category__count">3</span></button>
+        </div>
+        <!-- Items -->
+        <div class="projects__item">
+            <a href="" class="project__image" target="_blank">
+                <img src="images/projects/xxx.png" alt="project title">
+                <div class="project__description">
+                    <h3>project title</h3>
+                    <span>project description</span>
+                </div>
+            </a>
+        </div>
+    </section>
     <!-- Contact -->
-    <section id="contact"></section>
+    <section id="contact">
+        <h1 class="contact__title">Contact me</h1>
+        <h2 class="contact__email">kimhy0809@gmail.com</h2>
+        <div class="contact__links">
+            <a href="https://github.com/freeandblue" target="_blank">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="#" target="_blank">
+                <i class="fab fa-linkedin"></i>
+            </a>
+        </div>
+        <p class="contact__rights">2021 Kimmi - All rights reserved</p>
+
+    </section>
 </body>
 </html>
