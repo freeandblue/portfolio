@@ -1,7 +1,11 @@
 /* Global */
 :root {
   /* Color */
-  --color-background: #ffffff;
+  --color-dark: #1d3557;
+  --color-medium: #457b9d;
+  --color-light: #a8dadc;
+  --color-white: #f1faee;
+  --color-highlight: #e63946;
   --color-text: black;
 
   /* Font size */
@@ -17,11 +21,29 @@
   --weight-regular: 400;
 
   /* Size */
+  --size-border-radius: 3px;
 }
 
 /* Universal tags */
 * {
   box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Barlow";
+  cursor: default;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-text);
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 10px;
 }
 
 /* Typography */
@@ -53,4 +75,41 @@ p {
   font-weight: var(--weight-regular);
   color: var(--color-text);
   margin: 4px, 0px;
+}
+
+/* Navigation bar */
+#navbar {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--color-dark);
+  color: var(--color-white);
+  align-items: center;
+  padding: 0px;
+}
+
+.navbar__menu {
+  display: flex;
+}
+
+.navbar__menu__item {
+  padding: 8px, 12px;
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+.active {
+  font-weight: var(--weight-bold);
+}
+
+.navbar__menu__item:hover {
+  background-color: var(--color-hover);
+}
+
+.navbar__logo {
+  font-size: var(--font-small);
+  font-weight: var(--weight-semi-bold);
+}
+
+.navbar__logo img {
+  width: 20%;
 }
