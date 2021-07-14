@@ -84,7 +84,7 @@ h1 {
 }
 
 h2 {
-  font-size: var(--font-regular);
+  font-size: var(--font-medium);
   font-weight: var(--weight-semi-bold);
   color: var(--color-text);
   margin: 8px, 0px;
@@ -101,7 +101,6 @@ p {
   font-size: var(--font-regular);
   font-weight: var(--weight-regular);
   color: var(--color-text);
-  margin: 4px, 0px;
 }
 
 /* Navigation bar */
@@ -341,6 +340,8 @@ p {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  padding: 30px;
+  margin: 30px;
 }
 
 .project {
@@ -351,6 +352,7 @@ p {
   padding: 5px;
   background-color: var(--color-white);
   border: 1px solid var(--color-light);
+  border-radius: 5px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -360,6 +362,7 @@ p {
   max-width: 100%;
   max-height: 100%;
   padding: 5px;
+  border-radius: 10px;
 }
 
 .project__description {
@@ -375,6 +378,7 @@ p {
   opacity: 0;
   transform: translateY(10px);
   transition: all var(--animation-duration) ease-in;
+  border-radius: 5px;
 }
 
 .project:hover .project__description {
@@ -397,4 +401,37 @@ span {
   left: 50%;
   margin-left: -12px;
   margin-top: 8px;
+}
+
+/* Contact */
+.contact__title {
+  margin: 37px 0;
+}
+.contact__email {
+  padding: 10px;
+  margin: 50px 0px 10px 0px;
+}
+
+.contact__links {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.contact__links i {
+  font-size: var(--font-medium);
+  margin: 0px 10px;
+}
+
+.contact__links a {
+  margin: 10px;
+}
+
+.contact__links i:hover {
+  transform: scale(1.1);
+  color: var(--color-highlight);
+}
+
+.contact__rights {
+  margin-top: 50px;
 }
