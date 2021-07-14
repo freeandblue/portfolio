@@ -309,7 +309,7 @@ p {
 
 /* Projects */
 .projects__categories {
-  margin: 60px 40px;
+  margin: 60px 40px 20px 0px;
 }
 .category__btn {
   border: 1px solid var(--color-medium);
@@ -341,7 +341,7 @@ p {
   flex-wrap: wrap;
   justify-content: center;
   padding: 30px;
-  margin: 30px;
+  margin-bottom: 30px;
 }
 
 .project {
@@ -387,7 +387,7 @@ p {
 }
 
 .project__description h3,
-span {
+.project__description span {
   color: var(--color-white);
 }
 
