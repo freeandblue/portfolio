@@ -427,6 +427,9 @@ p {
 }
 
 /* Contact */
+#contact {
+  background-color: var(--color-lightgrey);
+}
 .contact__title {
   margin: 37px 0;
 }
@@ -443,6 +446,7 @@ p {
 
 .contact__links i {
   font-size: var(--font-medium);
+  color: var(--color-text);
   margin: 0px 10px;
 }
 
@@ -457,12 +461,34 @@ p {
 
 .contact__rights {
   margin-top: 50px;
+  font-size: var(--font-micro);
+}
+
+/* Arrow up button */
+.arrow-up-btn {
+  /* fixed position in viewport -> moves out of the parent box */
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  font-size: var(--font-medium);
+  background-color: var(--color-highlight);
+  color: var(--color-white);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: none;
+}
+
+.arrow-up-btn.visible {
+  display: block;
 }
 
 /* For small screen size (below 768px width) */
 @media screen and (max-width: 768px) {
   .navbar__toggle-btn {
     display: block;
+    margin-top: -25px;
+    color: var(--color-white);
   }
   #navbar {
     flex-direction: column;
