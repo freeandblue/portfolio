@@ -55,4 +55,27 @@ document.addEventListener('scroll', () => {
 arrowUp.addEventListener('click', () => {
     const homeSection = document.querySelector('#home');
     homeSection.scrollIntoView({behavior: "smooth"});
-})
+});
+
+
+/*--- Make projects filtered by categories ---*/
+const categoryButtons = document.querySelector('.projects__categories');
+const projectItems = document.querySelector('.projects__item');
+const projects = document.querySelectorAll('.project');
+categoryButtons.addEventListener('click', (event) => {
+    const filter = event.target.dataset.filter || event.target.parentNode.dataset.filter;
+   if(filter==null) {
+       return;
+   }
+   projectItems.classList.add('animation');
+   setTimeout(() => {
+    projects.forEach((project) => {
+        if(filter === '*' || filter === project.dataset.type) {
+            project.classList.remove('invisible');
+        } else {
+            project.classList.add('invisible');
+        }
+    });
+    projectItems.classList.remove('animation');
+   }, 300);
+});
