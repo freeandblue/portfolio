@@ -32,16 +32,27 @@ const homeContactBtn = document.querySelector('.home__contact');
 homeContactBtn.addEventListener('click', () => {
     const contactSection = document.querySelector('#contact');
     contactSection.scrollIntoView({behavior: "smooth"});
-})
+});
 
 /*--- Make home slowly fade to transparent as the window scrolls down ---*/
 const home = document.querySelector('.home__container');
 const homeHeight = home.getBoundingClientRect().height;
 document.addEventListener('scroll', () => {
     home.style.opacity = 1-window.scrollY / homeHeight;
-})
+});
 
 /*--- Show arrow up button when scrolling down ---*/
+const arrowUp = document.querySelector('.arrow-up-btn');
 document.addEventListener('scroll', () => {
-    // if(window.scrollY)
+    if(window.scrollY > homeHeight / 2) {
+        arrowUp.classList.add('visible');
+    } else {
+        arrowUp.classList.remove('visible');
+    }
+});
+
+/*--- Scroll to home when arrow up button is clicked ---*/
+arrowUp.addEventListener('click', () => {
+    const homeSection = document.querySelector('#home');
+    homeSection.scrollIntoView({behavior: "smooth"});
 })

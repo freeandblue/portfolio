@@ -469,18 +469,21 @@ p {
   /* fixed position in viewport -> moves out of the parent box */
   position: fixed;
   bottom: 50px;
-  right: 50px;
+  right: 2px;
   font-size: var(--font-medium);
   background-color: var(--color-highlight);
   color: var(--color-white);
   border-radius: 50%;
   width: 40px;
   height: 40px;
-  display: none;
+  opacity: 0;
+  transition: all var(--animation-duration) ease-in-out;
+  pointer-events: none;
 }
 
 .arrow-up-btn.visible {
-  display: block;
+  opacity: 1;
+  pointer-events: auto;
 }
 
 /* For small screen size (below 768px width) */
