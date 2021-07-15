@@ -57,16 +57,22 @@ arrowUp.addEventListener('click', () => {
     homeSection.scrollIntoView({behavior: "smooth"});
 });
 
-
 /*--- Make projects filtered by categories ---*/
-const categoryButtons = document.querySelector('.projects__categories');
+const projectCategories = document.querySelector('.projects__categories');
 const projectItems = document.querySelector('.projects__item');
 const projects = document.querySelectorAll('.project');
-categoryButtons.addEventListener('click', (event) => {
+projectCategories.addEventListener('click', (event) => {
     const filter = event.target.dataset.filter || event.target.parentNode.dataset.filter;
    if(filter==null) {
        return;
    }
+
+   /* make the clicked project active */
+   const active = document.querySelector('.category__btn.active');
+   active.classList.remove('active');
+   const target = event.target.nodeName === 'BUTTON' ? event.target : event.target.parentNode;
+   target.classList.add('active');
+   /* animation */
    projectItems.classList.add('animation');
    setTimeout(() => {
     projects.forEach((project) => {
@@ -78,4 +84,5 @@ categoryButtons.addEventListener('click', (event) => {
     });
     projectItems.classList.remove('animation');
    }, 300);
+
 });

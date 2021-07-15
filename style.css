@@ -340,6 +340,7 @@ p {
   font-size: var(--font-small);
   padding: 8px 20px;
   margin: 5px 5px;
+  background-color: var(--color-white);
 }
 
 .category__btn.active,
