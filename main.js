@@ -23,8 +23,17 @@ navbarMenu.addEventListener('click', (event) => {
     if(link == null) {
         return;
     }
+    navbarMenu.classList.remove('open');
+    home.classList.remove('open');
     const scrollTo = document.querySelector(link);
     scrollTo.scrollIntoView({behavior: "smooth"});
+});
+
+
+/*--- Navbar toggle button ---*/
+const toggleBtn = document.querySelector('.navbar__toggle-btn');
+toggleBtn.addEventListener('click', () => {
+    navbarMenu.classList.toggle('open');
 });
 
 /*--- Scroll to contact section when clicking on the contact-me button ---*/
@@ -66,7 +75,6 @@ projectCategories.addEventListener('click', (event) => {
    if(filter==null) {
        return;
    }
-
    /* make the clicked project active */
    const active = document.querySelector('.category__btn.active');
    active.classList.remove('active');
@@ -84,5 +92,6 @@ projectCategories.addEventListener('click', (event) => {
     });
     projectItems.classList.remove('animation');
    }, 300);
-
 });
+
+

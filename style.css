@@ -365,6 +365,7 @@ p {
   flex-wrap: wrap;
   justify-content: center;
   padding: 30px;
+  margin: auto;
   margin-bottom: 30px;
   overflow: hidden;
   opacity: 1;
@@ -412,7 +413,7 @@ p {
   flex-direction: column;
   justify-content: center;
   opacity: 0;
-  transform: translateY(10px);
+  transform: translateY(5px);
   transition: all var(--animation-duration) ease-in;
   border-radius: 5px;
 }
@@ -429,13 +430,13 @@ p {
 
 .project__description h3:after {
   content: "";
-  width: 25px;
+  width: 50px;
   height: 2px;
   background-color: var(--color-white);
   display: block;
   position: relative;
   left: 50%;
-  margin-left: -12px;
+  margin-left: -25px;
   margin-top: 8px;
 }
 
@@ -501,21 +502,31 @@ p {
 
 /* For small screen size (below 768px width) */
 @media screen and (max-width: 768px) {
-  .navbar__toggle-btn {
-    display: block;
-    margin-top: -25px;
-    color: var(--color-white);
-  }
   #navbar {
     flex-direction: column;
     align-items: flex-start;
+    background-color: var(--color-medium);
+    padding: 8px;
+    opacity: 0.9;
   }
+
+  .navbar__toggle-btn {
+    display: block;
+    margin-top: -15px;
+    color: var(--color-white);
+  }
+
   .navbar__menu {
     flex-direction: column;
     text-align: center;
     width: 100%;
     margin-bottom: 20px;
     display: none;
+  }
+
+  .navbar__menu.open {
+    display: block;
+    position: relative;
   }
 
   .skillset {
@@ -525,9 +536,5 @@ p {
   .skillset__left,
   .skillset__right {
     margin: 10px 0px;
-  }
-
-  .project {
-    flex-grow: 1;
   }
 }
