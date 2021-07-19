@@ -29,7 +29,6 @@ navbarMenu.addEventListener('click', (event) => {
     scrollTo.scrollIntoView({behavior: "smooth"});
 });
 
-
 /*--- Navbar toggle button ---*/
 const toggleBtn = document.querySelector('.navbar__toggle-btn');
 toggleBtn.addEventListener('click', () => {
@@ -93,5 +92,3 @@ projectCategories.addEventListener('click', (event) => {
     projectItems.classList.remove('animation');
    }, 300);
 });
-
-
