@@ -65,30 +65,32 @@ arrowUp.addEventListener('click', () => {
     homeSection.scrollIntoView({behavior: "smooth"});
 });
 
-/*--- Make projects filtered by categories ---*/
-const projectCategories = document.querySelector('.projects__categories');
-const projectItems = document.querySelector('.projects__item');
-const projects = document.querySelectorAll('.project');
-projectCategories.addEventListener('click', (event) => {
-    const filter = event.target.dataset.filter || event.target.parentNode.dataset.filter;
-   if(filter==null) {
-       return;
-   }
-   /* make the clicked project active */
-   const active = document.querySelector('.category__btn.active');
-   active.classList.remove('active');
-   const target = event.target.nodeName === 'BUTTON' ? event.target : event.target.parentNode;
-   target.classList.add('active');
-   /* animation */
-   projectItems.classList.add('animation');
-   setTimeout(() => {
-    projects.forEach((project) => {
-        if(filter === '*' || filter === project.dataset.type) {
-            project.classList.remove('invisible');
-        } else {
-            project.classList.add('invisible');
+if(document.querySelector('#projects') != null) {
+    /*--- Make projects filtered by categories ---*/
+    const projectCategories = document.querySelector('.projects__categories');
+    const projectItems = document.querySelector('.projects__item');
+    const projects = document.querySelectorAll('.project');
+    projectCategories.addEventListener('click', (event) => {
+        const filter = event.target.dataset.filter || event.target.parentNode.dataset.filter;
+        if(filter==null) {
+            return;
         }
+    /* make the clicked project active */
+        const active = document.querySelector('.category__btn.active');
+        active.classList.remove('active');
+        const target = event.target.nodeName === 'BUTTON' ? event.target : event.target.parentNode;
+        target.classList.add('active');
+        /* animation */
+        projectItems.classList.add('animation');
+        setTimeout(() => {
+        projects.forEach((project) => {
+            if(filter === '*' || filter === project.dataset.type) {
+                project.classList.remove('invisible');
+            } else {
+                project.classList.add('invisible');
+            }
+        });
+        projectItems.classList.remove('animation');
+        }, 300);
     });
-    projectItems.classList.remove('animation');
-   }, 300);
-});
+};
